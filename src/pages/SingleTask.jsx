@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { toast } from "react-toastify"
+import EditForm from "../components/EditForm"
 
 export default function SingleTask() 
 {
@@ -9,6 +10,7 @@ export default function SingleTask()
   const [task, setTask] = useState({})
     const { id } = useParams()
 
+    // FETCH SINGLE TASK
     useEffect(()=>{
     
       fetch(`http://localhost:3000/tasks/${id}`)
@@ -18,9 +20,8 @@ export default function SingleTask()
          setTask(response)
       })
     
-    }, [])
+    }, [id])
 
-    console.log(task)
 
     // DELETE
     const handleDelete = () => {
@@ -60,10 +61,11 @@ export default function SingleTask()
               }
             </div>
 
-            <div className='mt-4 flex gap-6'>
+            <div className='mt-4 flex gap-6 justify-end border-t border-b p-4'>
               <button onClick={handleDelete} className="bg-red-700 text-white px-2 py-1">Delete</button>
-              <button className="bg-green-700 text-white px-2 py-1">Edit</button>
             </div>
+
+            <EditForm task={task} />
 
 
     </div>

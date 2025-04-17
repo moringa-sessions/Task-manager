@@ -4,7 +4,7 @@
       "id": "1",
       "title": "Design Homepage",
       "image": "https://www.sweetprocess.com/wp-content/uploads/2022/10/task-management-20.png",
-      "status": "in-progress",
+      "status": "completed",
       "assignee": "alice@example.com",
       "tags": [
         "design",
@@ -59,18 +59,20 @@
       "id": "7",
       "title": "Add Payment Integration",
       "image": "https://www.sweetprocess.com/wp-content/uploads/2022/10/task-management-1.png",
-      "status": "in-progress",
+      "status": "completed",
       "assignee": "grace@example.com",
       "tags": [
         "finance",
-        "api"
+        "api",
+        "react",
+        "tailwindcss"
       ]
     },
     {
       "id": "c426",
       "title": "Tuesday React Class Standup",
       "image": "https://www.shutterstock.com/image-vector/big-task-word-small-people-260nw-1429801826.jpg",
-      "status": "not started",
+      "status": "not-started",
       "assignee": "kk@gmail.com",
       "tags": [
         "reatc",
@@ -81,7 +83,7 @@
       "id": "84fe",
       "title": "React Routing Version 6/7",
       "image": "https://www.shutterstock.com/image-vector/big-task-word-small-people-260nw-1429801826.jpg",
-      "status": "not started",
+      "status": "not-started",
       "assignee": "koech@gmail.com",
       "tags": [
         "react"

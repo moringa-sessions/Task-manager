@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import ReactPaginate from 'react-paginate';
 
 export default function Home() {
 
@@ -19,16 +19,35 @@ useEffect(()=>{
 }, [])
 
 
+// Pagination
+const [itemOffset, setItemOffset] = useState(0);
+
+const itemsPerPage = 8;
+const endOffset = itemOffset + itemsPerPage;
+console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+const currentItems = tasks.slice(itemOffset, endOffset);
+const pageCount = Math.ceil(tasks.length / itemsPerPage);
+
+// Invoke when user click to request another page.
+const handlePageClick = (event) => {
+  const newOffset = (event.selected * itemsPerPage) % tasks.length;
+  console.log(
+    `User requested page number ${event.selected}, which is offset ${newOffset}`
+  );
+  setItemOffset(newOffset);
+};
+
+
   return (
     
-    <div className='container mx-auto  border-4 border-double border-red-200'>
+    <div className='container mx-auto '>
 
 
     
-    <h2 className='text-center text-4xl font-bold'>Tasks {tasks.length}</h2>
+    <h2 className='text-center text-4xl font-bold font-poppins'>Tasks {tasks.length}</h2>
     <div className='grid grid-cols-4 gap-6 p-8'>
       {
-        tasks.map((task)=>(
+        currentItems.map((task)=>(
           <Link to={`/task/${task.id}`} key={task.id} className='border rounded-lg p-4'>
             <img className='h-[20vh] w-auto' src={task.image} alt='task' />
             <h4>{task.title}</h4>
@@ -52,6 +71,16 @@ useEffect(()=>{
 
         ))
       }
+
+<ReactPaginate
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="< previous"
+        renderOnZeroPageCount={null}
+      />
     </div>
 
  </div>

@@ -62,7 +62,7 @@ export default function AddTask() {
 return (
   <div className='container mx-auto  '>
       <form onSubmit={handleSubmit} className="max-w-sm mx-auto border rounded-lg p-4 mt-14">
-            <h2 className='text-center text-4xl font-bold '>Add Task</h2>
+            <h2 className='text-center text-4xl font-bold font-dancing'>Add Task</h2>
             <div className="mb-5">
               <label className="block mb-2 text-sm font-medium  dark:text-white">Assignee email</label>
               <input onChange={(e)=>setAssignee(e.target.value)} value={assignee} type="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
@@ -89,7 +89,7 @@ return (
               <label className="block mb-2 text-sm font-medium  dark:text-white">Task Status</label>
               <select onChange={(e)=>setStatus(e.target.value)} value={status} type="text" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  required>
                 <option value="">Select Status</option>
-                <option value="not started">Not Started</option>
+                <option value="not-started">Not Started</option>
                 <option value="in-progress">In Progress</option>
                 <option value="completed">Completed</option>  
                 <option value="not completed">Not Completed</option>
