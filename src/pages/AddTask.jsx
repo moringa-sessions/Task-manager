@@ -34,7 +34,7 @@ export default function AddTask() {
             console.log("Assignee: ", assignee)
 
             
-          fetch("http://localhost:3000/tasks", {
+          fetch("https://task-manager-r3w4.onrender.com/tasks", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json"

@@ -33,7 +33,7 @@ export default function EditForm({task}) {
        else{
   
               
-            fetch(`http://localhost:3000/tasks/${task.id}`, {
+            fetch(`https://task-manager-r3w4.onrender.com/tasks/${task.id}`, {
                 method: "PATCH",
                 headers: {
                   "Content-Type": "application/json"

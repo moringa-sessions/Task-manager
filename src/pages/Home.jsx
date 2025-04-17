@@ -9,7 +9,7 @@ export default function Home() {
 
 useEffect(()=>{
 
-  fetch("http://localhost:3000/tasks")
+  fetch("https://task-manager-r3w4.onrender.com/tasks")
   .then((r)=>r.json())
   .then((response)=>{
 

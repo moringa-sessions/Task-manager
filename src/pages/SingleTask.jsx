@@ -13,7 +13,7 @@ export default function SingleTask()
     // FETCH SINGLE TASK
     useEffect(()=>{
     
-      fetch(`http://localhost:3000/tasks/${id}`)
+      fetch(`https://task-manager-r3w4.onrender.com/tasks/${id}`)
       .then((r)=>r.json())
       .then((response)=>{
     
@@ -25,7 +25,7 @@ export default function SingleTask()
 
     // DELETE
     const handleDelete = () => {
-      fetch(`http://localhost:3000/tasks/${id}`, {
+      fetch(`https://task-manager-r3w4.onrender.com/tasks/${id}`, {
         method: "DELETE"
       })
       .then((r)=>r.json())
