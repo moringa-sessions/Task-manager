@@ -23,17 +23,6 @@
       ]
     },
     {
-      "id": "3",
-      "title": "Implement Auth",
-      "image": "https://www.cflowapps.com/wp-content/uploads/2021/12/diffnce_job_task_process.jpeg",
-      "status": "not-started",
-      "assignee": "carol@example.com",
-      "tags": [
-        "security",
-        "backend"
-      ]
-    },
-    {
       "id": "4",
       "title": "Deploy to Vercel",
       "image": "https://www.shutterstock.com/image-vector/big-task-word-small-people-260nw-1429801826.jpg",

@@ -5,6 +5,7 @@ import Contact from './pages/Contact'
 import Home from './pages/Home'
 import AddTask from './pages/AddTask'
 import NoPage from './pages/NoPage'
+import SingleTask from './pages/SingleTask'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
        <Route index element={<Home /> } />
        <Route path='/contactus'  element={<Contact />} />
        <Route path="/addtask"  element={<AddTask />} /> 
+       <Route path="/task/:id"  element={<SingleTask />} /> 
        <Route path="*" element={<NoPage />} />
     </Route>
   </Routes>

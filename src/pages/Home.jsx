@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react'
-import Form from '../components/Form'
-import { ToastContainer } from 'react-toastify';
+import { Link } from 'react-router-dom'
 
 
 export default function Home() {
 
 
     const [tasks, setTasks] = useState([])
-const [onFormSubmit, setOnFormSubmit] = useState(true)
 
 useEffect(()=>{
 
@@ -18,23 +16,20 @@ useEffect(()=>{
      setTasks(response)
   })
 
-}, [onFormSubmit])
+}, [])
 
 
   return (
     
     <div className='container mx-auto  border-4 border-double border-red-200'>
-    <ToastContainer position="top-center" theme="colored"      />
 
-
-    <Form onFormSubmit={onFormSubmit} setOnFormSubmit={setOnFormSubmit} />
 
     
     <h2 className='text-center text-4xl font-bold'>Tasks {tasks.length}</h2>
     <div className='grid grid-cols-4 gap-6 p-8'>
       {
         tasks.map((task)=>(
-          <div key={task.id} className='border rounded-lg p-4'>
+          <Link to={`/task/${task.id}`} key={task.id} className='border rounded-lg p-4'>
             <img className='h-[20vh] w-auto' src={task.image} alt='task' />
             <h4>{task.title}</h4>
             <h5>Assigned to {task.assignee}</h5>
@@ -53,7 +48,7 @@ useEffect(()=>{
                 ))
               }
             </div>
-          </div>
+          </Link>
 
         ))
       }
