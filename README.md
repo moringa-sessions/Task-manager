@@ -28,7 +28,7 @@ A user can
 
 ## Deplyment
 * You can view the frontend live on [Task Manager](https://taskmanager-git-main-kkoechs-projects.vercel.app/)
-* You can view the backend db.json here [Task Manager](https://task-manager-r3w4.onrender.com/tasks.app/)
+* You can view the backend db.json here [Task Manager](https://task-manager-r3w4.onrender.com/tasks)
 
 ## Known Bugs
 The application works perfectly well, no bugs.
